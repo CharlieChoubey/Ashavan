@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashavan - Wellness, Healing, Tarot & Counselling</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBF5; /* A very light, warm cream */
+        }
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+        /* Custom color from the logo */
+        .brand-green { color: #2E7D32; }
+        .bg-brand-green { background-color: #2E7D32; }
+        .hover\:bg-brand-green-dark:hover { background-color: #1B5E20; }
+        .focus\:ring-brand-green:focus { --tw-ring-color: #2E7D32; }
+        .text-brand-green { color: #2E7D32; }
+        .border-brand-green { border-color: #2E7D32; }
+
+        /* Ken Burns (slow zoom-in) effect for the hero video */
+        @keyframes kenburns-zoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        .hero-video-zoom {
+            animation: kenburns-zoom 20s infinite alternate forwards;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <!-- Video Logo -->
+            <a href="#">
+                <video class="h-16 w-auto" autoplay loop muted playsinline>
+                    <source src="http://googleusercontent.com/file_content/2" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+            <!-- Right Aligned Nav Group -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="hover:text-brand-green transition-colors">About Us</a>
+                <a href="#services" class="hover:text-brand-green transition-colors">Services</a>
+                <a href="#blog" class="hover:text-brand-green transition-colors">Blog</a>
+                <a href="#testimonials" class="hover:text-brand-green transition-colors">Testimonials</a>
+                <a href="#contact" class="hover:text-brand-green transition-colors">Contact</a>
+                <a href="#contact" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-green-dark transition-all hover:scale-105">Book a Session</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-sm hover:bg-green-50">About Us</a>
+            <a href="#services" class="block py-2 px-6 text-sm hover:bg-green-50">Services</a>
+            <a href="#blog" class="block py-2 px-6 text-sm hover:bg-green-50">Blog</a>
+            <a href="#testimonials" class="block py-2 px-6 text-sm hover:bg-green-50">Testimonials</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-green-50">Contact</a>
+            <a href="#contact" class="block m-4 bg-brand-green text-white text-center px-6 py-2 rounded-full hover:bg-brand-green-dark">Book a Session</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="h-[80vh] relative overflow-hidden flex items-center justify-center text-white">
+            <!-- Video Background -->
+            <video class="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2 z-0 hero-video-zoom" autoplay loop muted playsinline>
+                <source src="http://googleusercontent.com/file_content/5" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 text-center p-6 max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold font-lora mb-4 leading-tight">Rediscover Your Inner Harmony</h1>
+                <p class="text-lg md:text-xl mb-8">Your sanctuary for holistic healing, insightful tarot card readings, and compassionate counselling.</p>
+                <a href="#services" class="bg-white text-brand-green px-10 py-3 rounded-full font-semibold text-lg hover:bg-amber-50 transition-transform hover:scale-105">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                     <img src="http://googleusercontent.com/file_content/3" alt="Ashavan interior with a desk and view" class="rounded-lg shadow-lg w-full h-full object-cover aspect-[3/4]">
+                     <img src="http://googleusercontent.com/file_content/4" alt="Ashavan interior with a plant and notice board" class="rounded-lg shadow-lg w-full h-full object-cover aspect-[3/4] mt-8">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora mb-6">Welcome to Ashavan</h2>
+                    <p class="text-lg text-slate-600 mb-4 leading-relaxed">
+                        At Ashavan, we believe that true wellness is a harmonious balance of mind, body, and spirit. Our name, derived from an ancient word for 'upholding truth and order', reflects our commitment to guiding you on your authentic path.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        We are a collective of passionate healers and guides dedicated to creating a safe, nurturing space for your personal journey. Whether you seek clarity, healing, or a deeper connection with yourself, we are here to support you with compassion and integrity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora">Our Offerings</h2>
+                    <p class="text-lg text-slate-600 mt-2 max-w-2xl mx-auto">Services designed to illuminate your path and nurture your soul.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service Card 1: Healing -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-16 h-16 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2.01M12 18v-1m0-1v-1m0 2v1m0 1v1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-lora mb-3">Spiritual Healing</h3>
+                        <p class="text-slate-600">Release energetic blockages and restore your natural state of balance with our intuitive healing sessions, including Reiki and sound therapy.</p>
+                    </div>
+                    <!-- Service Card 2: Tarot Reading (Highlighted) -->
+                    <div class="bg-brand-green text-white p-8 rounded-lg shadow-xl text-center transform md:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex justify-center mb-4">
+                           <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-lora mb-3">Tarot Card Reading</h3>
+                        <p>Gain profound clarity and guidance on your life's questions. Our unique approach to tarot illuminates your path, empowering you to make conscious choices.</p>
+                    </div>
+                    <!-- Service Card 3: Counselling -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-16 h-16 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h4M5 8h2a2 2 0 012 2v6a2 2 0 01-2 2H5v4l-4-4H1a2 2 0 01-2-2V7a2 2 0 012-2h4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-lora mb-3">Mindful Counselling</h3>
+                        <p>A safe and confidential space to explore your thoughts and feelings. We integrate mindfulness techniques to help you navigate life's challenges with grace.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora">From Our Journal</h2>
+                    <p class="text-lg text-slate-600 mt-2 max-w-2xl mx-auto">Musings on wellness, spirituality, and mindful living.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1506126613408-4e64a38386ae?q=80&w=2070&auto=format&fit=crop" alt="A person meditating peacefully outdoors" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-6">
+                            <p class="text-sm text-brand-green font-semibold mb-1">Mindfulness</p>
+                            <h3 class="text-xl font-bold font-lora mb-2">Finding Stillness in a Busy World</h3>
+                            <p class="text-slate-600 text-sm mb-4">Discover three simple techniques to incorporate mindfulness into your daily routine, no matter how hectic your schedule is.</p>
+                            <a href="#" class="font-semibold text-brand-green hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1591799346134-258020270a3a?q=80&w=1974&auto=format&fit=crop" alt="An aesthetic spread of tarot cards on a dark surface" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-6">
+                            <p class="text-sm text-brand-green font-semibold mb-1">Tarot</p>
+                            <h3 class="text-xl font-bold font-lora mb-2">Demystifying the Tarot: A Beginner's Guide</h3>
+                            <p class="text-slate-600 text-sm mb-4">Curious about tarot but don't know where to start? We break down the basics and explain how it can be a powerful tool for self-reflection.</p>
+                            <a href="#" class="font-semibold text-brand-green hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1542013936693-414271434e4a?q=80&w=2070&auto=format&fit=crop" alt="Tibetan singing bowls used for sound healing" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-6">
+                            <p class="text-sm text-brand-green font-semibold mb-1">Healing</p>
+                            <h3 class="text-xl font-bold font-lora mb-2">The Science of Sound Healing</h3>
+                            <p class="text-slate-600 text-sm mb-4">Explore the fascinating connection between sound frequencies and our well-being, and how it can help in your healing journey.</p>
+                            <a href="#" class="font-semibold text-brand-green hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora">Words from Our Community</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-slate-600 italic mb-4">"My tarot reading with Vandana was life-changing. She has a way of explaining the cards that is so clear and insightful. I left feeling empowered and with a true sense of direction."</p>
+                        <p class="font-bold text-brand-green">- Anjali R.</p>
+                        <p class="text-sm text-slate-500">Service: Tarot Card Reading</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-slate-600 italic mb-4">"Vandana has a true gift. The healing session was incredibly powerful and left me feeling lighter and more at peace than I have in years. A truly magical experience."</p>
+                        <p class="font-bold text-brand-green">- Sameer K.</p>
+                        <p class="text-sm text-slate-500">Service: Spiritual Healing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-green-50/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora">Connect With Us</h2>
+                    <p class="text-lg text-slate-600 mt-2 max-w-2xl mx-auto">Ready to begin your journey? Reach out to book a session or learn more.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <form class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="mb-4">
+                            <label for="name" class="block text-slate-700 mb-1">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-slate-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green">
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="block text-slate-700 mb-1">Service of Interest</label>
+                            <select id="service" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green">
+                                <option>Spiritual Healing</option>
+                                <option>Tarot Card Reading</option>
+                                <option>Mindful Counselling</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-slate-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-green text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-green-dark transition-transform hover:scale-105">Send Message</button>
+                    </form>
+                    <!-- Contact Info & Map -->
+                    <div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                            <h3 class="text-xl font-bold text-brand-green mb-4">Our Sanctuary</h3>
+                            <p class="text-slate-600 mb-2"><strong>Address:</strong> D-603, Vimal Shyam Vihar Enclave, Opp. Hariyali Restaurant, Pundag, Ranchi - 834004</p>
+                            <p class="text-slate-600 mb-2"><strong>Email:</strong> ashavanindia@gmail.com</p>
+                            <p class="text-slate-600"><strong>Phone:</strong> +91 91993 92930</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/xUA8To5aLZ9Cqp8B6" target="_blank" rel="noopener noreferrer" class="block rounded-lg shadow-lg overflow-hidden group">
+                            <img src="https://placehold.co/600x400/a7c4c4/FFFFFF?text=View+on+Google+Maps" alt="A map showing the location of Ashavan" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-green text-white">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <!-- Footer Video Logo -->
+            <div class="flex justify-center mb-4">
+                <video class="h-20 w-auto" autoplay loop muted playsinline>
+                    <source src="http://googleusercontent.com/file_content/2" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="flex justify-center items-center space-x-6 mb-6">
+                <a href="https://www.instagram.com/ashavanindia?igsh=MWFhY2xqZHAzb2hreA==" target="_blank" rel="noopener noreferrer" class="hover:text-amber-200 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.88 7.22a.75.75 0 011.06 1.06l-5.25 5.25a.75.75 0 01-1.06 0l-2.25-2.25a.75.75 0 111.06-1.06l1.72 1.72 4.72-4.72z" clip-rule="evenodd" /><path d="M8.29 16.25a1.75 1.75 0 002.47 0l6.25-6.25a1.75 1.75 0 10-2.47-2.47L9.53 12.53 8.29 11.29a1.75 1.75 0 00-2.47 2.47l2.47 2.47z" /><path d="M12 18a6 6 0 100-12 6 6 0 000 12zm0-2a4 4 0 110-8 4 4 0 010 8z" /></svg>
+                </a>
+                <a href="https://wa.me/919199392930" target="_blank" rel="noopener noreferrer" class="hover:text-amber-200 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.5 14.3c-.28-.14-1.65-.82-1.9-.91-.25-.09-.43-.14-.62.14-.19.28-.72.91-.88 1.1-.16.19-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.72-1.38-1.62-1.54-1.89-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.19-.28.28-.46.09-.19.05-.37-.02-.51-.07-.14-.62-1.49-.85-2.04-.23-.55-.46-.48-.62-.48-.16 0-.34-.02-.51-.02-.17 0-.44.07-.66.31-.23.25-.88.85-1.08 2.04-.2.1.19-1.23 1.25 2.48 1.03 1.25 2.53 1.94 3.6 2.23.19.05.6.02.82-.07.28-.11.87-.82 1-1.1.13-.28.25-.21.43-.12.19.09 1.23.58 1.44.69.21.11.37.16.42.1.05-.05.09-.23.07-.42z" /></svg>
+                </a>
+            </div>
+            <p class="text-sm text-green-200">&copy; 2025 Ashavan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
