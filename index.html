@@ -49,14 +49,23 @@
 
     <!-- Header -->
     <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
-            <!-- Video Logo -->
-            <a href="#" onclick="showPage('main')">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center relative">
+            <!-- Logo for Desktop -->
+            <a href="#" onclick="showPage('main')" class="hidden md:block">
                 <video class="h-24 w-auto" autoplay loop muted playsinline>
                     <source src="./WhatsApp Video 2025-08-06 at 09.52.15_670e304c.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </a>
+            <!-- Centered Logo for Mobile -->
+            <div class="flex-1 flex justify-center md:hidden">
+                 <a href="#" onclick="showPage('main')">
+                    <video class="h-28 w-auto" autoplay loop muted playsinline>
+                        <source src="./WhatsApp Video 2025-08-06 at 09.52.15_670e304c.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </a>
+            </div>
             <!-- Right Aligned Nav Group -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" onclick="showPage('main', '#about')" class="hover:text-brand-green transition-colors">About Us</a>
@@ -67,8 +76,8 @@
                 <a href="#contact" onclick="showPage('main', '#contact')" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-green-dark transition-all hover:scale-105">Book a Session</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <button id="mobile-menu-button" class="md:hidden absolute top-1/2 right-6 -translate-y-1/2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
         <!-- Mobile Menu -->
@@ -343,20 +352,23 @@
     <footer class="bg-brand-green text-white">
         <div class="container mx-auto px-6 py-10 text-center">
             <div class="flex justify-center mb-4">
-                <video class="h-20 w-auto" autoplay loop muted playsinline>
+                <video class="h-28 md:h-20 w-auto" autoplay loop muted playsinline>
                     <source src="./WhatsApp Video 2025-08-06 at 09.52.15_670e304c.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="flex justify-center items-center space-x-6 mb-6">
-                <a href="https://www.instagram.com/ashavanindia?igsh=MWFhY2xqZHAzb2hreA==" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM8.25 9.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM12 15a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" /><path d="M12 18a6 6 0 100-12 6 6 0 000 12zM17 7a1 1 0 100-2 1 1 0 000 2z" /></svg>
+            <div class="space-y-4 mb-6">
+                <a href="https://www.instagram.com/ashavanindia?igsh=MWFhY2xqZHAzb2hreA==" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 group">
+                    <svg class="w-7 h-7 text-white group-hover:opacity-75 transition-opacity" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM8.25 9.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM12 15a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" /><path d="M12 18a6 6 0 100-12 6 6 0 000 12zM17 7a1 1 0 100-2 1 1 0 000 2z" /></svg>
+                    <span class="group-hover:text-amber-200 transition-colors">@ashavanindia</span>
                 </a>
-                <a href="https://wa.me/919199392930" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.5 14.3c-.28-.14-1.65-.82-1.9-.91-.25-.09-.43-.14-.62.14-.19.28-.72.91-.88 1.1-.16.19-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.72-1.38-1.62-1.54-1.89-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.19-.28.28-.46.09-.19.05-.37-.02-.51-.07-.14-.62-1.49-.85-2.04-.23-.55-.46-.48-.62-.48-.16 0-.34-.02-.51-.02-.17 0-.44.07-.66.31-.23.25-.88.85-1.08 2.04-.2.1.19-1.23 1.25 2.48 1.03 1.25 2.53 1.94 3.6 2.23.19.05.6.02.82-.07.28-.11.87-.82 1-1.1.13-.28.25-.21.43-.12.19.09 1.23.58 1.44.69.21.11.37.16.42.1.05-.05.09-.23.07-.42z" /></svg>
+                <a href="tel:+919199392930" class="flex items-center justify-center space-x-3 group">
+                    <svg class="w-7 h-7 text-white group-hover:opacity-75 transition-opacity" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.5 14.3c-.28-.14-1.65-.82-1.9-.91-.25-.09-.43-.14-.62.14-.19.28-.72.91-.88 1.1-.16.19-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.72-1.38-1.62-1.54-1.89-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.19-.28.28-.46.09-.19.05-.37-.02-.51-.07-.14-.62-1.49-.85-2.04-.23-.55-.46-.48-.62-.48-.16 0-.34-.02-.51-.02-.17 0-.44.07-.66.31-.23.25-.88.85-1.08 2.04-.2.1.19-1.23 1.25 2.48 1.03 1.25 2.53 1.94 3.6 2.23.19.05.6.02.82-.07.28-.11.87-.82 1-1.1.13-.28.25-.21.43-.12.19.09 1.23.58 1.44.69.21.11.37.16.42.1.05-.05.09-.23.07-.42z" /></svg>
+                    <span class="group-hover:text-amber-200 transition-colors">+91 91993 92930</span>
                 </a>
-                <a href="mailto:ashavanindia@gmail.com" class="hover:opacity-75 transition-opacity">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0122.25 21H1.75A1.75 1.75 0 010 19.25V4.75C0 3.784.784 3 1.75 3zM1.5 4.75v.438l10.5 6.125 10.5-6.125V4.75a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25zM1.5 19.25V7.125l10.183 5.94a.75.75 0 00.634 0L22.5 7.125v12.125a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25z"/></svg>
+                <a href="mailto:ashavanindia@gmail.com" class="flex items-center justify-center space-x-3 group">
+                    <svg class="w-7 h-7 text-white group-hover:opacity-75 transition-opacity" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0122.25 21H1.75A1.75 1.75 0 010 19.25V4.75C0 3.784.784 3 1.75 3zM1.5 4.75v.438l10.5 6.125 10.5-6.125V4.75a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25zM1.5 19.25V7.125l10.183 5.94a.75.75 0 00.634 0L22.5 7.125v12.125a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25z"/></svg>
+                    <span class="group-hover:text-amber-200 transition-colors">ashavanindia@gmail.com</span>
                 </a>
             </div>
             <p class="text-sm text-green-200">&copy; 2025 Ashavan. All Rights Reserved.</p>
