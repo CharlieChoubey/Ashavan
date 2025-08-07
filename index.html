@@ -30,8 +30,11 @@
         .text-brand-green { color: #2E7D32; }
         .border-brand-green { border-color: #2E7D32; }
         .hover\:text-brand-green:hover { color: #2E7D32; }
-        .group:hover .group-hover\:text-white { color: white; }
-        .group:hover .group-hover\:text-brand-green { color: #2E7D32; }
+        
+        /* Group hover utility for text color */
+        .group:hover .group-hover\:text-white { 
+            color: white !important; 
+        }
 
         /* Ken Burns (slow zoom-in) effect for the hero image */
         @keyframes kenburns-zoom {
@@ -99,12 +102,12 @@
 
             <!-- About Us Section -->
             <section id="about" class="py-20 bg-white">
-                <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-4">
+                <div class="container mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
                          <img src="./_DSC0121.jpg" alt="Ashavan interior with a desk and view" class="rounded-lg shadow-lg w-full h-auto object-cover">
                          <img src="./_DSC0128.jpg" alt="Ashavan interior with a plant and notice board" class="rounded-lg shadow-lg w-full h-auto object-cover">
                     </div>
-                    <div class="text-center md:text-left">
+                    <div class="text-center max-w-4xl mx-auto">
                         <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora mb-6">Welcome to Ashavan</h2>
                         <p class="text-lg text-slate-600 mb-4 leading-relaxed">
                             At Ashavan, we believe that true wellness is a harmonious balance of mind, body, and spirit. Our name, derived from an ancient word for 'upholding truth and order', reflects our commitment to guiding you on your authentic path.
@@ -126,32 +129,32 @@
                     <div class="grid md:grid-cols-3 gap-8">
                         <!-- Service Card 1: Healing -->
                         <a href="#" onclick="showPage('blog-healing')" class="group block">
-                            <div class="bg-white p-8 rounded-lg shadow-lg text-center h-full transition-all duration-300 group-hover:bg-brand-green group-hover:text-white group-hover:shadow-2xl group-hover:-translate-y-2">
+                            <div class="bg-white p-8 rounded-lg shadow-lg text-center h-full transition-all duration-300 group-hover:bg-brand-green group-hover:shadow-2xl group-hover:-translate-y-2">
                                 <div class="flex justify-center mb-4">
                                     <svg class="w-16 h-16 text-brand-green transition-colors group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2.01M12 18v-1m0-1v-1m0 2v1m0 1v1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </div>
-                                <h3 class="text-2xl font-bold font-lora mb-3">Spiritual Healing</h3>
-                                <p>Release energetic blockages and restore your natural state of balance with our intuitive healing sessions, including Reiki and sound therapy.</p>
+                                <h3 class="text-2xl font-bold font-lora mb-3 group-hover:text-white">Spiritual Healing</h3>
+                                <p class="group-hover:text-white">Release energetic blockages and restore your natural state of balance with our intuitive healing sessions, including Reiki and sound therapy.</p>
                             </div>
                         </a>
                         <!-- Service Card 2: Tarot Reading -->
                         <a href="#" onclick="showPage('blog-tarot')" class="group block">
-                            <div class="bg-white p-8 rounded-lg shadow-lg text-center h-full transition-all duration-300 group-hover:bg-brand-green group-hover:text-white group-hover:shadow-2xl group-hover:-translate-y-2">
+                            <div class="bg-white p-8 rounded-lg shadow-lg text-center h-full transition-all duration-300 group-hover:bg-brand-green group-hover:shadow-2xl group-hover:-translate-y-2">
                                 <div class="flex justify-center mb-4">
                                    <svg class="w-16 h-16 text-brand-green transition-colors group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                                 </div>
-                                <h3 class="text-2xl font-bold font-lora mb-3">Tarot Card Reading</h3>
-                                <p>Gain profound clarity and guidance on your life's questions. Our unique approach to tarot illuminates your path, empowering you to make conscious choices.</p>
+                                <h3 class="text-2xl font-bold font-lora mb-3 group-hover:text-white">Tarot Card Reading</h3>
+                                <p class="group-hover:text-white">Gain profound clarity and guidance on your life's questions. Our unique approach to tarot illuminates your path, empowering you to make conscious choices.</p>
                             </div>
                         </a>
                         <!-- Service Card 3: Counselling -->
                         <a href="#" onclick="showPage('blog-mindfulness')" class="group block">
-                            <div class="bg-white p-8 rounded-lg shadow-lg text-center h-full transition-all duration-300 group-hover:bg-brand-green group-hover:text-white group-hover:shadow-2xl group-hover:-translate-y-2">
+                            <div class="bg-white p-8 rounded-lg shadow-lg text-center h-full transition-all duration-300 group-hover:bg-brand-green group-hover:shadow-2xl group-hover:-translate-y-2">
                                 <div class="flex justify-center mb-4">
                                     <svg class="w-16 h-16 text-brand-green transition-colors group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h4M5 8h2a2 2 0 012 2v6a2 2 0 01-2 2H5v4l-4-4H1a2 2 0 01-2-2V7a2 2 0 012-2h4"></path></svg>
                                 </div>
-                                <h3 class="text-2xl font-bold font-lora mb-3">Mindful Counselling</h3>
-                                <p>A safe and confidential space to explore your thoughts and feelings. We integrate mindfulness techniques to help you navigate life's challenges with grace.</p>
+                                <h3 class="text-2xl font-bold font-lora mb-3 group-hover:text-white">Mindful Counselling</h3>
+                                <p class="group-hover:text-white">A safe and confidential space to explore your thoughts and feelings. We integrate mindfulness techniques to help you navigate life's challenges with grace.</p>
                             </div>
                         </a>
                     </div>
@@ -168,7 +171,7 @@
                     <div class="grid md:grid-cols-3 gap-8">
                         <!-- Blog Post 1 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://images.unsplash.com/photo-1506126613408-4e64a38386ae?q=80&w=2070&auto=format&fit=crop" alt="A person meditating peacefully outdoors" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <img src="./Meditating.jpeg" alt="A person meditating peacefully outdoors" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
                             <div class="p-6">
                                 <p class="text-sm text-brand-green font-semibold mb-1">Mindfulness</p>
                                 <h3 class="text-xl font-bold font-lora mb-2">Finding Stillness in a Busy World</h3>
@@ -178,7 +181,7 @@
                         </div>
                         <!-- Blog Post 2 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://images.unsplash.com/photo-1591799346134-258020270a3a?q=80&w=1974&auto=format&fit=crop" alt="An aesthetic spread of tarot cards on a dark surface" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <img src="./Tarot.jpeg" alt="An aesthetic spread of tarot cards on a dark surface" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
                             <div class="p-6">
                                 <p class="text-sm text-brand-green font-semibold mb-1">Tarot</p>
                                 <h3 class="text-xl font-bold font-lora mb-2">Demystifying the Tarot: A Beginner's Guide</h3>
@@ -188,7 +191,7 @@
                         </div>
                         <!-- Blog Post 3 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://images.unsplash.com/photo-1542013936693-414271434e4a?q=80&w=2070&auto=format&fit=crop" alt="Tibetan singing bowls used for sound healing" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <img src="./Healing.jpeg" alt="Tibetan singing bowls used for sound healing" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
                             <div class="p-6">
                                 <p class="text-sm text-brand-green font-semibold mb-1">Healing</p>
                                 <h3 class="text-xl font-bold font-lora mb-2">The Science of Sound Healing</h3>
@@ -281,7 +284,7 @@
                     <p class="text-lg text-slate-500 mt-4">Posted on August 7, 2025</p>
                 </header>
                 <div class="prose lg:prose-xl mx-auto text-slate-700 leading-relaxed">
-                    <img src="https://images.unsplash.com/photo-1506126613408-4e64a38386ae?q=80&w=2070&auto=format&fit=crop" alt="A person meditating peacefully outdoors" class="rounded-lg shadow-xl mb-8 w-full">
+                    <img src="./Meditating.jpeg" alt="A person meditating peacefully outdoors" class="rounded-lg shadow-xl mb-8 w-full">
                     <p>In the constant hum of modern life, finding a moment of true stillness can feel like a monumental task. The demands of work, family, and social obligations pull our attention in a thousand different directions, leaving our minds cluttered and our spirits weary. Yet, it is in these moments of quiet reflection that we find our center, recharge our energy, and reconnect with our inner selves. Mindfulness is the practice of bringing gentle, non-judgmental awareness to the present moment, and it is a skill that can be cultivated by anyone, anywhere.</p>
                     <p>Here are three simple techniques to incorporate mindfulness into your daily routine:</p>
                     <h3>1. The Three-Breath Pause</h3>
@@ -308,7 +311,7 @@
                     <p class="text-lg text-slate-500 mt-4">Posted on August 7, 2025</p>
                 </header>
                 <div class="prose lg:prose-xl mx-auto text-slate-700 leading-relaxed">
-                    <img src="https://images.unsplash.com/photo-1591799346134-258020270a3a?q=80&w=1974&auto=format&fit=crop" alt="An aesthetic spread of tarot cards on a dark surface" class="rounded-lg shadow-xl mb-8 w-full">
+                    <img src="./Tarot.jpeg" alt="An aesthetic spread of tarot cards on a dark surface" class="rounded-lg shadow-xl mb-8 w-full">
                     <p>The tarot is often shrouded in mystery, seen as a fortune-telling tool reserved for a select few. But at its heart, the tarot is a deck of 78 cards that act as a mirror to the soul. It's a powerful system of archetypes, symbols, and stories that reflect the universal human experience. Rather than predicting a fixed future, the tarot offers a snapshot of the energies at play in your life right now, empowering you to make conscious, informed choices.</p>
                     <p>Think of it not as a crystal ball, but as a wise and honest friend. It doesn't give you absolute answers; instead, it asks you profound questions and helps you access your own inner wisdom. Each card holds a different energy, a different piece of the puzzle of life. The Major Arcana cards represent significant life lessons and spiritual milestones, while the Minor Arcana delve into the day-to-day situations, emotions, and challenges we all face.</p>
                     <p>When you approach a reading, you bring a question or situation to the cards. The cards that appear in your spread are not random; they are a reflection of your own subconscious mind and the energies surrounding you. By interpreting the symbols and stories in the cards, you can gain a deeper understanding of your circumstances, uncover hidden patterns, and explore potential paths forward. It's a beautiful, intuitive dialogue between you and the universe, a tool for self-reflection, and a guide for navigating your journey with greater awareness and purpose.</p>
@@ -329,7 +332,7 @@
                     <p class="text-lg text-slate-500 mt-4">Posted on August 7, 2025</p>
                 </header>
                 <div class="prose lg:prose-xl mx-auto text-slate-700 leading-relaxed">
-                    <img src="https://images.unsplash.com/photo-1542013936693-414271434e4a?q=80&w=2070&auto=format&fit=crop" alt="Tibetan singing bowls used for sound healing" class="rounded-lg shadow-xl mb-8 w-full">
+                    <img src="./Healing.jpeg" alt="Tibetan singing bowls used for sound healing" class="rounded-lg shadow-xl mb-8 w-full">
                     <p>Everything in the universe, including our bodies, is in a constant state of vibration. Sound healing is an ancient practice that uses the power of frequency and vibration to restore the body to its natural state of harmony. When we are stressed, unwell, or emotionally out of balance, our vibrational frequency can become disrupted. Sound healing works by introducing coherent, resonant frequencies that encourage the body's own vibrations to return to a healthy, balanced state.</p>
                     <p>The principle behind this is called "entrainment." Just as a grandfather clock in a room will eventually cause all other clocks to tick in unison, the powerful, stable vibrations of instruments like Tibetan singing bowls, gongs, or tuning forks can entrain our brainwaves and cellular vibrations. This process can shift us from the active, often anxious, Beta brainwave state into the more relaxed Alpha, deeply meditative Theta, or even restorative Delta states.</p>
                     <p>On a physiological level, these vibrations can help reduce stress by lowering cortisol levels, improve circulation, and stimulate the body's lymphatic system. Many people report feeling a sense of deep relaxation, reduced pain, and mental clarity after a session. It's a non-invasive, gentle, yet profound way to tune the instrument of your own body, clearing energetic blockages and creating a space for deep healing to occur on a cellular level.</p>
