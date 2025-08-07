@@ -30,7 +30,7 @@
         .text-brand-green { color: #2E7D32; }
         .border-brand-green { border-color: #2E7D32; }
 
-        /* Ken Burns (slow zoom-in) effect for the hero video */
+        /* Ken Burns (slow zoom-in) effect for the hero image */
         @keyframes kenburns-zoom {
             0% {
                 transform: scale(1);
@@ -39,7 +39,7 @@
                 transform: scale(1.1);
             }
         }
-        .hero-video-zoom {
+        .hero-image-zoom {
             animation: kenburns-zoom 20s infinite alternate forwards;
         }
     </style>
@@ -52,7 +52,7 @@
             <!-- Video Logo -->
             <a href="#">
                 <video class="h-16 w-auto" autoplay loop muted playsinline>
-                    <source src="http://googleusercontent.com/file_content/2" type="video/mp4">
+                    <source src="./WhatsApp Video 2025-08-06 at 09.52.15_670e304c.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </a>
@@ -84,11 +84,8 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="h-[80vh] relative overflow-hidden flex items-center justify-center text-white">
-            <!-- Video Background -->
-            <video class="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2 z-0 hero-video-zoom" autoplay loop muted playsinline>
-                <source src="http://googleusercontent.com/file_content/5" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <!-- Image Background with Zoom Effect -->
+            <img src="./_DSC0125.jpg" alt="A calming view of the Ashavan healing space" class="absolute top-0 left-0 w-full h-full object-cover z-0 hero-image-zoom">
             <div class="absolute inset-0 bg-black/50"></div>
             <div class="relative z-10 text-center p-6 max-w-3xl mx-auto">
                 <h1 class="text-4xl md:text-6xl font-bold font-lora mb-4 leading-tight">Rediscover Your Inner Harmony</h1>
@@ -101,8 +98,8 @@
         <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="grid grid-cols-2 gap-4">
-                     <img src="http://googleusercontent.com/file_content/3" alt="Ashavan interior with a desk and view" class="rounded-lg shadow-lg w-full h-full object-cover aspect-[3/4]">
-                     <img src="http://googleusercontent.com/file_content/4" alt="Ashavan interior with a plant and notice board" class="rounded-lg shadow-lg w-full h-full object-cover aspect-[3/4] mt-8">
+                     <img src="./_DSC0121.jpg" alt="Ashavan interior with a desk and view" class="rounded-lg shadow-lg w-full h-full object-cover aspect-[3/4]">
+                     <img src="./_DSC0128.jpg" alt="Ashavan interior with a plant and notice board" class="rounded-lg shadow-lg w-full h-full object-cover aspect-[3/4] mt-8">
                 </div>
                 <div class="text-center md:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora mb-6">Welcome to Ashavan</h2>
@@ -273,7 +270,7 @@
             <!-- Footer Video Logo -->
             <div class="flex justify-center mb-4">
                 <video class="h-20 w-auto" autoplay loop muted playsinline>
-                    <source src="http://googleusercontent.com/file_content/2" type="video/mp4">
+                    <source src="./WhatsApp Video 2025-08-06 at 09.52.15_670e304c.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
