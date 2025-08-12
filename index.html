@@ -247,6 +247,16 @@
                             <p class="font-bold text-brand-green">- Sameer K.</p>
                             <p class="text-sm text-slate-500">Service: Spiritual Healing</p>
                         </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <p class="text-slate-600 italic mb-4">"The atmosphere at Ashavan is so calming. From the moment I walked in, I felt a sense of peace. It's a true sanctuary in the middle of the city."</p>
+                            <p class="font-bold text-brand-green">- Priya S.</p>
+                            <p class="text-sm text-slate-500">Service: General Visit</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <p class="text-slate-600 italic mb-4">"I was skeptical about counselling, but the mindful approach at Ashavan made all the difference. I've learned so much about myself and have tools to manage my anxiety."</p>
+                            <p class="font-bold text-brand-green">- Rohan D.</p>
+                            <p class="text-sm text-slate-500">Service: Mindful Counselling</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -437,6 +447,10 @@
                 } else {
                      window.scrollTo(0, 0);
                 }
+                // Manually trigger Instagram's script to process new embeds
+                if (window.instgrm) {
+                    window.instgrm.Embeds.process();
+                }
             } else {
                 // Show the specific blog page
                 const activePage = document.getElementById(pageId);
@@ -458,7 +472,7 @@
         });
         
         // Form Submission and Validation Logic
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxAn3qtsEmm1MC199gMBvq772Lc5XLZCo93-mwOY-Cugid7hkDfBXsLgc5gkyczrdAJkw/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGA1qb4thJguQBIxGvKhLlv5UlBAKLfTP8zrOGYZeNrVPxLh1976g1dbX4Gp6ef5Ql2Q/exec';
         const form = document.getElementById('contact-form');
         const contactMethodSelect = document.getElementById('contact-method');
         const contactInfoContainer = document.getElementById('contact-info-input-container');
