@@ -43,6 +43,14 @@
         .hero-image-zoom {
             animation: kenburns-zoom 20s infinite alternate forwards;
         }
+
+        /* Lightbox styles */
+        .lightbox-backdrop {
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-content {
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body class="text-slate-800">
@@ -71,6 +79,7 @@
                 <a href="#about" onclick="showPage('main', '#about')" class="hover:text-brand-green transition-colors">About Us</a>
                 <a href="#services" onclick="showPage('main', '#services')" class="hover:text-brand-green transition-colors">Services</a>
                 <a href="#blog" onclick="showPage('main', '#blog')" class="hover:text-brand-green transition-colors">Blog</a>
+                <a href="#instagram" onclick="showPage('main', '#instagram')" class="hover:text-brand-green transition-colors">Instagram</a>
                 <a href="#testimonials" onclick="showPage('main', '#testimonials')" class="hover:text-brand-green transition-colors">Testimonials</a>
                 <a href="#contact" onclick="showPage('main', '#contact')" class="hover:text-brand-green transition-colors">Contact</a>
                 <a href="#contact" onclick="showPage('main', '#contact')" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-green-dark transition-all hover:scale-105">Book a Session</a>
@@ -85,6 +94,7 @@
             <a href="#about" onclick="showPage('main', '#about')" class="block py-2 px-6 text-sm hover:bg-green-50">About Us</a>
             <a href="#services" onclick="showPage('main', '#services')" class="block py-2 px-6 text-sm hover:bg-green-50">Services</a>
             <a href="#blog" onclick="showPage('main', '#blog')" class="block py-2 px-6 text-sm hover:bg-green-50">Blog</a>
+            <a href="#instagram" onclick="showPage('main', '#instagram')" class="block py-2 px-6 text-sm hover:bg-green-50">Instagram</a>
             <a href="#testimonials" onclick="showPage('main', '#testimonials')" class="block py-2 px-6 text-sm hover:bg-green-50">Testimonials</a>
             <a href="#contact" onclick="showPage('main', '#contact')" class="block py-2 px-6 text-sm hover:bg-green-50">Contact</a>
             <a href="#contact" onclick="showPage('main', '#contact')" class="block m-4 bg-brand-green text-white text-center px-6 py-2 rounded-full hover:bg-brand-green-dark">Book a Session</a>
@@ -203,6 +213,49 @@
                                 <a href="#" onclick="showPage('blog-healing')" class="font-semibold text-brand-green hover:underline">Read More &rarr;</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Instagram Section -->
+            <section id="instagram" class="py-20">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-green font-lora">Follow Our Journey</h2>
+                        <a href="https://www.instagram.com/ashavanindia?igsh=MWFhY2xqZHAzb2hreA==" target="_blank" rel="noopener noreferrer" class="text-lg text-slate-600 mt-2 max-w-2xl mx-auto hover:text-brand-green transition-colors">@ashavanindia on Instagram</a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Instagram Post 1 (Image) -->
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer group relative" onclick="openLightbox(this)">
+                            <img src="https://images.unsplash.com/photo-1595225324505-59b4a0fca69b?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="Crystal healing grid">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                <div class="text-white opacity-0 group-hover:opacity-100 transition-opacity flex items-center space-x-4">
+                                    <span class="flex items-center"><svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg> 128</span>
+                                    <span class="flex items-center"><svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM2 10a8 8 0 1116 0 8 8 0 01-16 0zm5.293-1.707a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z" clip-rule="evenodd" /></svg> 12</span>
+                                </div>
+                            </div>
+                            <div class="hidden" data-type="image" data-source="https://images.unsplash.com/photo-1595225324505-59b4a0fca69b?q=80&w=2070&auto=format&fit=crop"></div>
+                        </div>
+                        <!-- Instagram Post 2 (Video) -->
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer group relative" onclick="openLightbox(this)">
+                            <video src="./WhatsApp Video 2025-08-06 at 09.52.15_670e304c.mp4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" muted loop playsinline></video>
+                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <div class="hidden" data-type="video" data-source="./WhatsApp Video 2025-08-06 at 09.52.15_670e304c.mp4"></div>
+                        </div>
+                        <!-- Instagram Post 3 (Image) -->
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer group relative" onclick="openLightbox(this)">
+                            <img src="https://images.unsplash.com/photo-1598422899220-16c02a71a021?q=80&w=1964&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="Tarot cards on a wooden table">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                <div class="text-white opacity-0 group-hover:opacity-100 transition-opacity flex items-center space-x-4">
+                                    <span class="flex items-center"><svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg> 215</span>
+                                    <span class="flex items-center"><svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM2 10a8 8 0 1116 0 8 8 0 01-16 0zm5.293-1.707a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z" clip-rule="evenodd" /></svg> 28</span>
+                                </div>
+                            </div>
+                            <div class="hidden" data-type="image" data-source="https://images.unsplash.com/photo-1598422899220-16c02a71a021?q=80&w=1964&auto=format&fit=crop"></div>
+                        </div>
+                        <!-- More posts... -->
                     </div>
                 </div>
             </section>
@@ -349,6 +402,17 @@
         </div>
     </div>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4 lightbox-backdrop" onclick="closeLightbox()">
+        <div class="bg-white rounded-lg max-w-3xl max-h-[90vh] w-full h-auto overflow-hidden relative lightbox-content" onclick="event.stopPropagation()">
+            <button class="absolute top-2 right-2 text-white bg-black/50 rounded-full p-1 z-10" onclick="closeLightbox()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div id="lightbox-media-container" class="w-full h-full"></div>
+        </div>
+    </div>
+
+
     <footer class="bg-brand-green text-white">
         <div class="container mx-auto px-6 py-10 text-center">
             <div class="flex justify-center mb-4">
@@ -379,6 +443,8 @@
         const mainContent = document.getElementById('main-content');
         const blogPagesContainer = document.getElementById('blog-pages');
         const blogPages = document.querySelectorAll('.blog-page');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxMediaContainer = document.getElementById('lightbox-media-container');
 
         function showPage(pageId, anchor = null) {
             // Hide main content and all blog pages
@@ -419,6 +485,39 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+        
+        // Lightbox functions
+        function openLightbox(element) {
+            const mediaInfo = element.querySelector('[data-type]');
+            const type = mediaInfo.getAttribute('data-type');
+            const source = mediaInfo.getAttribute('data-source');
+
+            lightboxMediaContainer.innerHTML = ''; // Clear previous content
+
+            if (type === 'image') {
+                const img = document.createElement('img');
+                img.src = source;
+                img.className = 'w-full h-full object-contain';
+                lightboxMediaContainer.appendChild(img);
+            } else if (type === 'video') {
+                const video = document.createElement('video');
+                video.src = source;
+                video.className = 'w-full h-full object-contain';
+                video.controls = true;
+                video.autoplay = true;
+                lightboxMediaContainer.appendChild(video);
+            }
+
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxMediaContainer.innerHTML = ''; // Stop video playback
+        }
+
     </script>
 
 </body>
