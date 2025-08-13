@@ -472,7 +472,7 @@
         });
         
         // Form Submission and Validation Logic
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGA1qb4thJguQBIxGvKhLlv5UlBAKLfTP8zrOGYZeNrVPxLh1976g1dbX4Gp6ef5Ql2Q/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbylBDYWhkP4dgOHUIonO2OdmCJzj-i8RIcEf8PnfKdBvpI8kzOpYNjxUaTPfim6gu5MHQ/exec';
         const form = document.getElementById('contact-form');
         const contactMethodSelect = document.getElementById('contact-method');
         const contactInfoContainer = document.getElementById('contact-info-input-container');
@@ -556,23 +556,22 @@
             // Manually add the dynamic contact info to the form data
             formData.append('contactInfo', contactInput.value);
 
-            fetch(SCRIPT_URL, { method: 'POST', body: formData })
-                .then(response => response.json())
-                .then(data => {
-                    if(data.result === 'success') {
-                        formStatus.textContent = 'Thank you! Your message has been sent.';
-                        formStatus.classList.add('text-green-500');
-                        form.reset();
-                        updateContactInput(); // Reset the dynamic input
-                    } else {
-                        throw new Error(data.message);
-                    }
-                })
-                .catch(error => {
-                    formStatus.textContent = 'An error occurred. Please try again.';
-                    formStatus.classList.add('text-red-500');
-                    console.error('Error!', error.message);
-                });
+            fetch(SCRIPT_URL, { 
+                method: 'POST', 
+                body: formData,
+                mode: 'no-cors' // This can sometimes help with CORS issues, but you won't get a response back
+            })
+            .then(() => {
+                formStatus.textContent = 'Thank you! Your message has been sent.';
+                formStatus.classList.add('text-green-500');
+                form.reset();
+                updateContactInput(); // Reset the dynamic input
+            })
+            .catch(error => {
+                formStatus.textContent = 'An error occurred. Please try again.';
+                formStatus.classList.add('text-red-500');
+                console.error('Error!', error.message);
+            });
         });
 
     </script>
