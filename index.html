@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashavan - Wellness, Healing, Tarot & Counselling</title>
+    <link rel="icon" href="./Gemini_Generated_Image_x66baxx66baxx66b.png" type="image/png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -472,7 +473,7 @@
         });
         
         // Form Submission and Validation Logic
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrexwfCclOzU8uBikHtkRPEopLq61ecjHrsR4FbhLYL2wjBcHFlKeluzcl7uv6pKYwKg/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGA1qb4thJguQBIxGvKhLlv5UlBAKLfTP8zrOGYZeNrVPxLh1976g1dbX4Gp6ef5Ql2Q/exec';
         const form = document.getElementById('contact-form');
         const contactMethodSelect = document.getElementById('contact-method');
         const contactInfoContainer = document.getElementById('contact-info-input-container');
@@ -558,14 +559,18 @@
 
             fetch(SCRIPT_URL, { 
                 method: 'POST', 
-                body: formData,
-                mode: 'no-cors' // This can sometimes help with CORS issues, but you won't get a response back
+                body: formData
             })
-            .then(() => {
-                formStatus.textContent = 'Thank you! Your message has been sent.';
-                formStatus.classList.add('text-green-500');
-                form.reset();
-                updateContactInput(); // Reset the dynamic input
+            .then(response => response.json())
+            .then(data => {
+                if(data.result === 'success') {
+                    formStatus.textContent = 'Thank you! Your message has been sent.';
+                    formStatus.classList.add('text-green-500');
+                    form.reset();
+                    updateContactInput(); // Reset the dynamic input
+                } else {
+                    throw new Error(data.message);
+                }
             })
             .catch(error => {
                 formStatus.textContent = 'An error occurred. Please try again.';
@@ -578,5 +583,4 @@
     <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
-
 
